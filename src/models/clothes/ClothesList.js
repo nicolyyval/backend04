@@ -11,7 +11,7 @@ export class ClothesList{
         return this.clothes.find(clothes => clothes.id == id);
     }
 
-    getAllClothes(){
+    getClothing(){
         return this.clothes;
     }
 
@@ -33,6 +33,19 @@ export class ClothesList{
         });
         return this.getClothesById(id);
     }
+    getClothingBySize(size) {
+        return this.clothes.filter(clothing => clothing.size === size);
+    }
+    
+    getClothingByType(type) {
+        return this.clothes.filter(cloth => cloth.type === type);
+    }
+
+    getClothingByColor(color) {
+        return this.clothes.filter(cloth => cloth.color === color);
+    }
 }
+
+
 
 //  id, nome, tipo, tamanho, cor, imagem, e quantidade em estoque
