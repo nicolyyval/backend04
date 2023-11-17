@@ -3,13 +3,13 @@ import {
     createClothes,
     deleteClothes,
     getSClothesById,
-    getClothes,
+    getCloths,
     updateClothes 
 } from "../controllers/clothes.controller.js";
 
 const clothesRoutes = Router();
 
-clothesRoutes.get("/", getClothes);
+clothesRoutes.get("/", getCloths);
 
 clothesRoutes.get("/:id", getSClothesById);
 
