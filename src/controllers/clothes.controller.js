@@ -37,12 +37,12 @@ export const createClothes = (req, res) => {
 
     const clothes = new Clothes(name, type, size, color, image, quantity);
     list.addClothes(clothes);
-    return res.status(201).send({ message: "Aluno criado com sucesso!", clothes, });
+    return res.status(201).send({ message: "Roupa criada com sucesso!", clothes, });
 }
 
 export const updateClothes = (req, res) => {
     const { id } = req.params;
-    const { name, type, size, color, image, quantity} = req.body;
+    const { name, type, size, color, image, quantity } = req.body;
     if (!name || !type || !size || !color || !image || !quantity) {
         return res.status(400).send(
             { message: "Missing required informations!" }
